@@ -1,17 +1,16 @@
------------------HTML CODE--------------------
+-----------------JAVASCRIPT TO PRINT CURRENT DATE AND TIME--------------------
 <!DOCTYPE html>
   <html>
   <head>
   <meta charset="utf-8">
   <title>Displaying current day and time</title>
   </head>
-  <body></body>
-</html>
------------------JAVASCRIPT CODE----------------
-var today = new Date();
+  <body>
+  <script>
+  var today = new Date();
   var day = today.getDay();
   var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-  console.log("Today is : " + daylist[day] + ".");
+  document.write("Today is : " + daylist[day] + ".");
   var hour = today.getHours();
   var minute = today.getMinutes();
   var second = today.getSeconds();
@@ -43,4 +42,7 @@ var today = new Date();
   prepand=' AM';
   } 
  } 
-console.log("Current Time : "+hour + prepand + " : " + minute + " : " + second);
+document.write("Current Time : "+hour + prepand + " : " + minute + " : " + second);
+</script>
+</body>
+</html>
