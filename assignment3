@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h2>Current date</h2>
 <script>
       var today = new Date();
       var dd = today.getDate(); 
