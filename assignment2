@@ -1,18 +1,17 @@
 ------------JAVASCRIPT TO PRINT THE CONTENTS OF CURRENT WINDOW------------
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset=utf-8 />
-<title>Print the current page.</title>
-</head>
 <body>
+<button id="print-button" onclick="printPage">print</button>
 <script>
- window.print();
+var printer = document.getElementById("print-button");
+function printPage() {
+  window.print();
+}
+printer.addEventListener("click", printPage);
 </script>
 </body>
 </html>
-
-
 
 
 
