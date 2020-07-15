@@ -1,0 +1,56 @@
+<!--difference between var,let and const -->
+<html>
+    <head>
+    </head>
+    <body>
+     <b>var in javascript:</b>
+     <p>1.var declarations are globally scoped or function/locally scoped.
+         <br>2.var is function scoped when it is declared within a function. This means that it is available and can be accessed only within that function.
+         <br>3.var variables can be updated and redeclared
+         <br><b>examples:</b><br>
+             var name="lalitha";<br>
+             console.log(name);//prints lalitha<br>
+             name="divya";<br>
+             console.log(name);//prints divya</p>
+
+     </p>
+         <script>
+         {
+            var name = "lalitha";
+            console.log(name); //this will print name in the console
+        }
+        {
+            let age = 20 ;
+            console.log(20); //this will print value in the console
+        }
+        {
+            const branch = "IT";
+            console.log(branch); //this will print name in the console
+        }
+        </script>
+    <b>Let in javascript:</b>
+    <p>1.let can be updated but not re-declared.<br>
+       <b>example:</b><br>
+       let Hello = "say Hi";<br>
+       let Hello = "say good afternoon instead"; // error: Identifier 'hello' has already been declared<br>
+       2.let is block scoped<br>
+       <b>example:</b><pre>
+        let i = 4;
+        if (i > 3) {
+        let hello = "say Hello instead";
+        console.log(hello);// "say Hello instead"
+        }
+        console.log(hello) // hello is not defined
+        </pre>
+    </p>
+    <b>Const in javascript</b>
+    <p>1.Variables declared with the const maintain constant values.<br>
+       2.const declarations are block scoped.<br>
+       3.const cannot be updated or re-declared.<br>
+       <b>examples:</b><br><pre>
+       const c= "hello letsupgrader";
+       c = "say hai";// error: Assignment to constant variable. 
+       </pre>
+    </p>         
+    </body>
+</html>
