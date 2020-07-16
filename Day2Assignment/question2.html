@@ -1,0 +1,163 @@
+<!--Methods of string and array-->
+<html>
+    <head>
+        <title>
+            Methods of string and array.
+        </title>
+    </head>
+    <body>
+        <p>
+            <b>METHODS IN STRING:</b><br>
+            <b>1.search()-</b>This method returns the position of the first occurrence of a specified text in a string:.<br>
+            <b>Example:</b><br><pre>
+            var str = "Where there is no pain,there is no gain.";
+            var pos = str.search("pain");
+            console.log("position is: ",pos);//prints the position of pain
+        </pre>
+        </p>
+        <script>
+            var str = "Where there is no pain,there is no gain.";
+            var pos = str.search("pain");
+            console.log("position is: ",pos);
+        </script>
+        <p>
+            <b>2.substring()</b>-This method extracts the characters from a string, between two specified indices, and returns the new sub string.<br>
+            <b>Example:</b><br><pre>
+            var str = "Hello Hyderabad!";
+            var res = str.substring(1,3);
+            console.log("The substring is: ", res);//returns the substring between those indices.
+        </pre>
+        </p>
+        <script>
+            var str = "Hello Hyderabad!";
+            var res = str.substring(1,3);
+            console.log("The substring is: ", res);
+        </script>
+        <p>
+           <b>3.replace()-</b>1.This method replaces one value with another value in a string.<br>
+                              2.This method replaces only the first match.<br>
+                              3.This method is case sensitive.To replace case insensitive, use a regular expression with an /i flag.<br>
+           <b>Example:</b><br><pre>
+           st = "Please visit Bangladesh!";
+           var n = str.replace("Bangladesh", "India");
+           console.log("After replace string is:",n);//replaces old value with given new value. 
+           </pre>
+        </p>
+        <script>
+            st = "Please visit Bangladesh!";
+            var n = st.replace("Bangladesh", "India");
+            console.log("After replace string is:",n);
+        </script>
+        <p>
+           <b>4.replaceall()-</b>This method replaces  all the occurences of the given string.<br>
+           <b>Example:</b><br><pre>
+           st1= "hello hobby";
+           var s1= st1.replace (/b/g,".");
+           console.log("After replacement string is: ",s1);
+           // 'hello ho..y'
+           </pre>
+        </p>
+        <script>
+            st1= "hello hobby";
+            var s1= st1.replace (/b/g,"."); 
+            console.log("After replacement string is: ",s1);
+        </script>  
+        <p>
+            <b>5.trim()-</b>This removes leading and trailing whitespaces from the string.<br>
+            <b>Example:</b><br><pre>
+            var s1= "         javascript trim    "; 
+            var s2=s1.trim();
+            console.log("After trimming :",s2);  //trims all leading spaces
+            </pre>
+         </p>
+         <script>  
+            var s1="     javascript trim    ";  
+            var s2=s1.trim();  
+            console.log("After trimming :",s2);  
+        </script> 
+        <p>
+            <b>6.slice()-</b>This method returns the parts of string from given beginIndex to endIndex.<br>
+            <b>Example:</b><br><pre>
+            var t1="abcdefgh";  
+            var t2=t1.slice(2,5);
+            console.log("After slicing:",t2);//slices from 2 to 5.
+        </pre>
+        </p>
+        <script>  
+            var t1="abcdefgh";  
+            var t2=t1.slice(2,5);  
+            console.log("After slicing:",t2);  
+        </script>  
+    <p>
+    <p>-------------------------------------------------</p>
+        <b>METHODS IN ARRAY:</b><br>
+        <b>1.every()-</b>checks whether all the given elements in an array are satisfying the provided condition<br>
+        <b>Example:</b><br><pre>
+        var marks=[50,40,45,37,20]; 
+        function check(value)  
+        {  
+          return value>30;  //return false, as marks[4]=20  
+        }  
+        console.log((marks.every(check));
+        </pre>
+    </p>
+        <script>  
+            var marks=[50,40,45,37,20];  
+              
+            function check(value)  
+            {  
+              return value>30;  //return false, as marks[4]=20  
+            }  
+            console.log((marks.every(check)));  
+        </script> 
+    <p>
+        <b>2.splice()-</b>This method is used to add/remove the elements to/from the existing array.<br>
+        <b>Example:</b><br><pre>
+        var arr=["Monday","Tuesday","Saturday","Sunday","Thursday","Friday"];  
+        var result=arr.splice(2);  
+        console.log("Updated array:"+arr);  
+        console.log("Removed element: "+result);
+        </pre>
+    </p>
+    <script>
+        var arr=["Monday","Tuesday","Saturday","Sunday","Thursday","Friday"];  
+        var result=arr.splice(2);  
+        console.log("Updated array:"+arr);  
+        console.log("Removed element:"+result);
+    </script>
+    <p>
+        <b>3.sort()-</b>This method is used to arrange the array elements in some order. By default, sort() method follows the ascending order.<br>
+        <b>Example:</b><br><pre>
+            var arr=["AngularJS","Node.js","JQuery","Bootstrap"]  
+            var result=arr.sort();  
+            console.log(result); 
+    </pre>
+    </p>
+    <script>  
+            var arr=["AngularJS","Node.js","JQuery","Bootstrap"]  
+            var result=arr.sort();  
+            console.log(result);  
+    </script>
+    <p>
+        <b>4.toString()-</b>This  method is used for converting and representing an array into string form().<br>
+        <b>Example:</b><br><pre>
+            var season=["Spring","Autumn","Summer","Winter"];  
+            var str=season.toString(); //toString() method implementation  
+            console.log("After converting into string:  "+str);
+        </pre>
+    </p>
+    <script>  
+       var season=["Spring","Autumn","Summer","Winter"];  
+       var str=season.toString(); //toString() method implementation  
+       console.log("After converting into string:  "+str);  
+    </script>  
+    <p>
+    <b>5.from()-</b>creates a new array that holds the shallow copy from an array or iterable object.<br>
+    <b>Example:</b><br><pre>
+       console.log(Array.from([10, 20, 30]);//output is 10,20,30</p></pre>
+    </p>
+    <script> 
+      console.log(Array.from([10, 20, 30]));
+    </script>   
+    </body>
+</html>
