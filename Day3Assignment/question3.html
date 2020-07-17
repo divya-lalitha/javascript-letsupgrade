@@ -1,0 +1,68 @@
+//js program to print grade
+<html>
+    <head>
+        <title>
+            To print grade of a student.
+        </title>
+    </head>
+    <body>
+        <p>using if else</p>
+        <script>
+            let marks=prompt("Enter your marks:");
+            let grade;
+            if(marks >=90){
+                grade = "O";
+            }
+            else if(marks >=80 && marks<90){
+                grade = "S";
+            }
+            else if(marks >=70 && marks<80){
+                grade = "A";
+            }
+            else if(marks >=60 && marks<70){
+                grade = "B";
+            }
+            else if(marks >=50 && marks<60){
+                grade = "C";
+            }
+            else if(marks >=40 && marks<50){
+                grade = "D";
+            }
+            else{
+                grade = "Fail";
+            }
+        console.log("using if else:");7
+        console.log(`Marks are ${marks} and grade is ${grade}.`);
+        </script>
+        <p>using switch case</p>
+        <script>
+        switch(true){
+            case (marks >=90) :
+                grade = "O";
+                break;
+            case (marks >=80 && marks<90) :
+                grade = "S";
+                break;
+            case (marks >=70 && marks<80) :
+                grade = "A";
+                break;
+            case (marks >=60 && marks<70) :
+                grade = "B";
+                break;
+            case (marks >=50 && marks<60) : 
+                grade = "C";
+                break;
+            case (marks >=40 && marks<50) :
+                grade = "D";
+                break;
+            case(marks<40) :
+                grade = "Fail";
+                break;
+            default:
+                grade = "Invalid marks";
+        }
+        console.log("using switch case:");
+        console.log(`Marks are ${marks} and grade is ${grade}.`);
+    </script>
+   </body>
+ </html>           
