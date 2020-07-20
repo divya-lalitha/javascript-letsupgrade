@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            calculator
+        </title>
+    </head>
+    <body>
+        <script>
+            let ch=prompt("Enter your choice");
+            if(ch>0 && ch<5)
+            {
+            var n1=parseInt(prompt("Enter 1st number"));
+            var n2=parseInt(prompt("Enter 2nd number"));
+            }
+            else if(ch==5)
+            {
+            var num=parseInt(prompt("Enter a number"));
+            }
+            else if(ch==6)
+            {
+             var num=parseInt(prompt("Enter a number"));
+             var percent=parseInt(prompt("Enter percent"));
+             var result=num*percent/100;
+            }
+            //1.Addition
+            //2.Subtraction
+            //3.Multiplication
+            //4.Division
+            //5.Square root
+            //6.Percentage
+            switch(+ch)
+            {
+            case 1:var d=n1+n2;
+                   console.log("The addition is",d);
+                   break;
+            case 2:var d=n1-n2;
+                   console.log("The subtraction is",d);
+                   break;
+            case 3:var d=n1*n2;
+                   console.log("The multiplication is",d);
+                   break;
+            case 4:var d=n1/n2;
+                   console.log("The division is",d);
+                   break;
+            case 5:var d=num;
+                   console.log("The Square root is",Math.sqrt(d).toPrecision(2));
+                   break;
+            case 6:var d=result;
+                  console.log("The percentage is",d);
+                  break;
+            default:
+                  console.log("Invalid choice");
+            }
+        </script>
+    </body>
+</html>

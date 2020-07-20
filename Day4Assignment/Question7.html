@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>
+        prime numbers between given range
+    </title>
+</head>
+<body>
+    <script>
+       let upper=parseInt(prompt("Enter upper limit"));
+       var store  = [], i, j, prime = [];
+        for (i = 2; i <= upper; ++i) 
+        {
+        if (!store[i]) 
+          {
+            prime.push(i);
+            for (j = i << 1; j <= upper; j += i) 
+            {
+                store[j] = true;
+            }
+          }
+       }
+       console.log(prime);
+    </script>
+</body>
+</html>

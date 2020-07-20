@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            reward based on sales made by them.
+        </title>
+    </head>
+    <body>
+        <script>
+            let sales=parseInt(prompt("Enter sales of the employee"));
+            let commission;
+            if(sales>0 && sales<=5000)
+            {
+             commission=sales*0.02;
+            }
+            else if(sales>5000 && sales<=10000)
+            {
+            commission=sales*0.05;
+            }
+            else if(sales>10000 && sales<=20000)
+            {
+            commission=sales*0.07;
+            }
+            else if(sales>20000)
+            {
+            commission=sales*0.10;
+            }
+            else{
+            console.log("invalid input");
+            }
+            console.log("Commision earned is",commission);
+        </script>
+    </body>
+</html>

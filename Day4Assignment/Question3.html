@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            js arrays
+        </title>
+    </head>
+    <body>
+        <script>
+            let shoppinglist=["milk","bread","chocolates","fruits","biscuits","tomato ketchup","rice","wheat"];
+            for(let i=0;i<shoppinglist.length;i++)
+            {
+            console.log(shoppinglist[i]);
+            }
+            console.log("// After adding new items//");
+            let shoppingBasket=[];
+            shoppingBasket=shoppinglist.concat(["Vegetables","cooldrinks"]);
+            for(let i=0;i<shoppingBasket.length;i++)
+            {
+            console.log(shoppingBasket[i]);
+            }
+        </script>
+    </body>
+</html>
