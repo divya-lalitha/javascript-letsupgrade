@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>
+            Question2
+        </title>
+    </head>
+    <body>
+        <script>
+          class User{
+            constructor(name, age, email){
+                this.name = name;
+                this.age = age;
+                this.email= email;
+                this.courses=[];
+            }
+            login(){
+                console.log(`${this.name} has logged in`);
+                return this;
+            }
+            logout(){
+                console.log(`${this.name} has logged out`);
+                return this;
+            }
+        }
+        class Moderator extends User{
+            constructor(name, age, email){
+                super(name, age, email);
+                this.coins=0;
+
+            }
+            addCoins(){
+                this.coins++;
+                console.log(`${this.name} has ${this.coins} coins now.`);
+                return this;
+            }
+            removeCoins(){
+                this.coins--;
+                console.log(`${this.name} has ${this.coins} coins now.`);
+                return this;
+            }   
+        }
+        class Admin extends Moderator{
+            constructor(name, age, email){
+                super(name, age, email);
+            }
+            addCourse(user,course)
+            {
+            user.courses.push(course);
+            console.log(user);
+            return this;
+            }
+            deleteCourse(user,course)
+            {
+            user.courses.pop(course);
+            console.log(user);
+            return this;
+            }
+        }
+
+
+        let user1 = new User("Kotta Divya lalitha", 20, "kottalalitha@gmail.com");
+        user1.login().logout();
+
+        let hari=new User("hari","23","harikumar1999@gmail.com");
+
+        let user2 = new Moderator("pk", 20, "pspk108@gmail.com");
+        user2.addCoins().addCoins();
+        user2.removeCoins();
+
+
+
+        let admin=new Admin("rahul","25","rahulshetty@gmail.com");
+        admin.addCourse(user1,'javascript');
+        admin.addCourse(user1,'python');
+        admin.addCourse(hari,'html');
+        admin.deleteCourse(hari,'html');
+
+        </script>
+    </body>
+</html>
