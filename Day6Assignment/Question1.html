@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+            program that will iterate over an array of colors and change the background of the page.
+        </title>
+    </head>
+    <body>
+    <h1 style="background-color: aquamarine;">Day 6</h1>
+        <script>
+          let array = ["yellow", "blue", "brown", "skyblue","orange","grey"];
+          var i = 0;
+          function changebgColor(){
+            let color = array[i++];
+            document.body.style.backgroundColor=color;
+         }
+         setInterval(changebgColor, 5000)
+        </script>
+    </body>
+</html>

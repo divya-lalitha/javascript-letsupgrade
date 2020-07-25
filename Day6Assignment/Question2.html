@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            Multiplication table
+        </title>
+    </head>
+    <body>
+        <h4>
+        Displaying Multiplication
+        </h4>
+        <p id="demo">
+        </p>
+        <script>
+            let n=parseInt(prompt("Enter a number"));
+            var table=" ";
+            for(i=1;i<=10;i++) {
+                table+=+ n + " X " + i +" = "+(n*i)+"</br>";
+                document.getElementById('demo').innerHTML=table;
+            }
+        </script>
+    </body>
+</html>
